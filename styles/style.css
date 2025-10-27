@@ -70,7 +70,6 @@
   color: #000;
   font-family: Raleway, sans-serif;
   font-size: 18px;
-  font-style: normal;
   font-weight: 400;
   line-height: 23.6px;
 }
@@ -185,7 +184,7 @@
   word-spacing: 17px;
 }
 
-.cover__description-text-new-word-spacing{
+.cover__description-text-new-word-spacing {
   word-spacing: 19px;
 }
 
@@ -225,12 +224,6 @@
   display: block;
   height: 100%;
 }
-
-/* Элеменам с классом card задал четку ширину, 
-так как данный элемент состоит из определенного контента и 
-для его позиционированиия необходимо значение ширины
-Для корректного отображения на устройствах с другой диагональю экрана 
-родительскому списку добавлено свойство flex-wrap: wrap */
 
 .card {
   z-index: 2;
@@ -390,17 +383,12 @@ footer {
   border-bottom: none;
 }
 
-/* В элементе с классом foter__social-list я задал значения ширины
-для того, чтобы не задавать размеры каждой иконке социальной сети. 
-В моем случае достаточно выставить нужное расстояние между элементами
-и иконки становятся нужного размера. */
-
 .footer__social-list {
   list-style-type: none;
   display: flex;
   gap: 48px;
 }
 
-.footer__social-list-item-logo{
+.footer__social-list-item-logo {
   width: 48px;
 }
