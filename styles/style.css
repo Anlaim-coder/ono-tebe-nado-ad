@@ -1,4 +1,25 @@
 /* место для вашего кода */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden; /* предотвращает прокрутку */
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  max-width: 100%; /* убираем жесткое ограничение */
+}
+
+main, header, footer, .cover, .lots, .about {
+  max-width: 1100px;
+  margin: 0 auto; /* центрируем */
+  padding: 0 20px; /* немного внутреннего отступа вместо margin */
+  box-sizing: border-box;
+}
 .header {
   margin: 92px 50px 96px 50px;
   display: grid;
@@ -88,18 +109,24 @@
 
 .cover {
   background-image: url(../images/cover.jpg);
-  background-size: cover;
+  background-size: cover; /* или 100% */
   background-position: center;
+  width: 100%;
+  max-width: 1100px;
 }
 
 .overlay {
   background-color: rgba(0, 0, 0, 0.5);
+  width: calc(100% + 40px);
+  left: 0;
   z-index: 1;
+  margin-left: -20px;
 }
 
 .cover__title {
   z-index: 2;
-  padding-top: 165px;
+  padding: 165px 50px 0;
+
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
   text-transform: uppercase;
@@ -125,14 +152,14 @@
   text-align: start;
   grid-area: start;
   line-height: 115%;
-  margin: 0px 50px;
+  margin: 0px ;
 }
 
 .aligned-text_center {
   line-height: 100%;
   text-align: center;
   grid-area: center;
-  margin: 0px 95px 0px 65px;
+  margin: 0px;
   justify-self: center;
 }
 
@@ -140,11 +167,11 @@
   line-height: 70px;
   text-align: end;
   grid-area: end;
-  margin: 0px 50px 0px 50px;
+  margin: 0px 0px 0px 0px;
 }
 
 .new-letter-spacing {
-  letter-spacing: 60px;
+  letter-spacing: 40px;
 }
 
 .no-letter-spacing {
@@ -154,8 +181,9 @@
 .cover__description {
   display: flex;
   justify-content: space-between;
-  margin: 105px 50px 0px 50px;
+  margin: 105px 50px 0px 0px;
   padding-bottom: 50px;
+  width: 100%;
 }
 
 .bet-button,
@@ -168,6 +196,8 @@
   font-weight: 400;
   line-height: 28px;
   text-transform: uppercase;
+  margin-right: 20px;
+  margin-left: 20px;
 }
 
 .cover__description-text {
@@ -191,7 +221,7 @@
 }
 
 .lots {
-  margin: 180px 50px 0px 50px;
+  margin: 180px 0px 0px 0px;
   flex-shrink: 0;
   text-decoration: none;
 }
@@ -212,11 +242,11 @@
 .lots__card-list {
   display: flex;
   justify-content: space-between;
-  align-items: space-between;
   gap: 25px;
-  text-decoration: none;
-  
+  flex-wrap: nowrap; /* карточки строго в один ряд */
 }
+
+
 
 .card-link {
   text-decoration: none;
@@ -225,6 +255,7 @@
 }
 
 .card {
+  flex: 1 1 300px;
   z-index: 2;
   flex-grow: 1;
   width: 334px;
@@ -236,6 +267,7 @@
   justify-content:space-between;
   text-decoration: none;
   list-style-type: none;
+  box-sizing: border-box;
 }
 
 .card_type_film {
