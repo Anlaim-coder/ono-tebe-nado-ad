@@ -325,64 +325,39 @@ main, header, footer, .cover, .lots, .about {
   text-decoration: none;
   border-bottom: 1px solid black;
 }
-
-.about {
-  margin: 180px 50px 184px 50px;
+.about { 
+  margin: 120px 24px 181px 24px; 
 }
-
 .about__column {
-  display: grid;
-  grid-template-columns: 430px 1fr;
+  display: flex;
+  align-items: flex-start; /* чтобы верх логотипа совпадал с верхом текста */
+  gap: 25px; /* вместо margin-left на тексте */
 }
-
-/* В случае с классом about__logo я строго указал размеры блока, так как
-это необходимо для формирования черного круга нужного размера */
 
 .about__logo {
-  display: flex;
+  flex: 0 0 240px; /* фиксируем ширину логотипа */
   width: 240px;
   height: 240px;
   border-radius: 120px;
   background-color: #000;
-  justify-self: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* В случае с классом about__logo-image я строго указал его размеры, 
-так как это класс, относящийся к логотипу */
-
 .about__logo-image {
-  display: grid;
   width: 148px;
   height: 114px;
-  align-self: center;
-  margin-left: 46px;
 }
 
 .about__title-and-text-wrapper {
-  margin: 101px 0px 0px 25px;
-  display: grid;
-  row-gap: 30px;
+  flex: 1; /* растягивается на оставшееся пространство */
+  margin-top: 101px; /* оставляем как в макете */
+  display: flex;
+  flex-direction: column;
+  gap: 30px; /* аналог row-gap */
 }
 
-.about__title {
-  color: #000;
-  font-family: Raleway, sans-serif;
-  font-size: 40px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  text-transform: uppercase;
-  margin-bottom: 70px;
-}
-
-.about__text {
-  color: #000;
-  font-family: Raleway, sans-serif;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 23px;
-}
 
 footer {
   margin: 0px 50px 90px 50px;
