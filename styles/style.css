@@ -356,6 +356,8 @@ main, header, footer, .cover, .lots, .about {
   display: flex;
   flex-direction: column;
   gap: 30px; /* аналог row-gap */
+  width: 693px;
+  margin-left: 72px;
 }
 
 
